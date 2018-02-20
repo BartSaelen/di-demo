@@ -1,6 +1,6 @@
 package be.project28.didemo;
 
-import be.project28.didemo.controllers.ContructorInjectedController;
+import be.project28.didemo.controllers.ConstructorInjectedController;
 import be.project28.didemo.controllers.MyController;
 import be.project28.didemo.controllers.PropertyInjectedController;
 import be.project28.didemo.controllers.SetterInjectedController;
@@ -20,6 +20,6 @@ public class DiDemoApplication {
 
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(SetterInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(ContructorInjectedController.class).sayHello());
+		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
 	}
 }
