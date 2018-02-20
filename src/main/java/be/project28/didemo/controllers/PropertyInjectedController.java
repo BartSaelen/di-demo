@@ -2,13 +2,15 @@ package be.project28.didemo.controllers;
 
 import be.project28.didemo.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class PropertyInjectedController {
 
     @Autowired
-    public GreetingService greetingServiceImpl; //property name matches bean name, so gets right one gets injected
+    @Qualifier("greetingServiceImpl")
+    public GreetingService greetingServiceImpl;
 
     public String sayHello(){
         return greetingServiceImpl.sayGreeting();
